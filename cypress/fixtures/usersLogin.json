@@ -1,0 +1,12 @@
+[
+  {
+      "email": "qa999magento@mail.com",  
+      "password": "Magento_SoftwareTestingBoard"
+  },
+
+  {
+      "email": "qamagento@mail.com", 
+      "password": "Magento_SoftwareTestingBoard"
+  }
+  
+]

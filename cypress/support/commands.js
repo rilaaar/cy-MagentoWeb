@@ -5,6 +5,14 @@ Cypress.Commands.add('signInOption', (email, password) => {
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
     cy.get('.base').should('contain.text','Home Page')
  })
+
+ Cypress.Commands.add('signInInValid', (email, password) => {
+    cy.get('.panel > .header > .authorization-link > a').click()
+    cy.get('#email').type(email)
+    cy.get('#pass').type(password)
+    cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
+    cy.get('.message-error').should('contain.text','The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
+ })
  
  Cypress.Commands.add('verifyTittlePage', (locator,text) => {
     cy.get(locator).should('include.text', text)
