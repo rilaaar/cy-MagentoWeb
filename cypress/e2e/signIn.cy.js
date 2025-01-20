@@ -28,7 +28,7 @@ describe('userSignIn', () => {
       });
      })
 
-     it('Success Sign In with invalid account (fixtures)', () => {
+     it('Sign In with invalid account (fixtures)', () => {
       cy.fixture('usersLogin.json').then((usersLogin) => {
         if (usersLogin.length === 0) {
           throw new Error('usersLogin.json is empty.');
